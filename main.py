@@ -11,7 +11,7 @@ def get_gsheet():
     gc = gspread.service_account_from_dict(sa_info)
 
     # Buka file sheet sesuai nama di environment variable
-   sh = gc.open_by_key(os.environ["SPREADSHEET_ID"])
+    sh = gc.open_by_key(os.environ["SPREADSHEET_ID"])
     ws = sh.worksheet(os.environ.get("SHEET_WORKSHEET", "Kedai"))
     return ws
 
@@ -81,4 +81,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
